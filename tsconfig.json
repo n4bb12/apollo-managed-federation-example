@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "lib": ["ES2021"],
+    "moduleResolution": "Node",
+    "strict": true,
+    "target": "ES2021"
+  },
+  "include": ["src"]
+}

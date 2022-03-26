@@ -1,0 +1,13 @@
+subgraphs:
+  accounts:
+    routing_url: http://localhost:3001
+    schema:
+      file: src/accounts/schema.gql
+  products:
+    routing_url: http://localhost:3002
+    schema:
+      file: src/products/schema.gql
+  reviews:
+    routing_url: http://localhost:3003
+    schema:
+      file: src/reviews/schema.gql
