@@ -14,5 +14,5 @@ const gateway = new ApolloGateway()
 const server = new ApolloServer({ gateway, introspection, plugins })
 
 server.listen(port, () => {
-  console.log(`${name} subgraph listening at http://localhost:${port}`)
+  console.log(`${name} listening at http://localhost:${port}`)
 })
