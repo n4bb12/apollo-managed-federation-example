@@ -85,7 +85,7 @@ subgraphs:
 ```
 
 ```sh title="rover supergraph compose"
-yarn -s rover supergraph compose \
+rover supergraph compose \
   --config ./supergraph.yml > src/gateway/schema.gql
 ```
 
@@ -121,24 +121,24 @@ flowchart TD
 **Authenticate Rover**
 
 ```
-yarn rover config auth
-yarn rover config whoami
+rover config auth
+rover config whoami
 ```
 
 **Publish Subgraph**
 
 ```
-yarn rover subgraph publish apollo-managed-federation-example@current \
+rover subgraph publish apollo-managed-federation-example@current \
   --name accounts \
   --schema src/accounts/schema.gql \
   --routing-url http://localhost:3001
 
-yarn rover subgraph publish apollo-managed-federation-example@current \
+rover subgraph publish apollo-managed-federation-example@current \
   --name products \
   --schema src/products/schema.gql \
   --routing-url http://localhost:3002
 
-yarn rover subgraph publish apollo-managed-federation-example@current \
+rover subgraph publish apollo-managed-federation-example@current \
   --name reviews \
   --schema src/reviews/schema.gql \
   --routing-url http://localhost:3003
