@@ -1,0 +1,8 @@
+type User @key(fields: "id") {
+  id: ID!
+  username: String!
+}
+
+extend type Query {
+  me: User
+}

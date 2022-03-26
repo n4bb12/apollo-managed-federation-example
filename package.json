@@ -15,10 +15,10 @@
   ],
   "license": "ISC",
   "author": "Abraham Schilling",
-  "main": "index.js",
   "scripts": {
     "accounts": "node dist/accounts/server",
-    "build": "tsc",
+    "build": "tsc && cp -R src/* dist/",
+    "compose": "rover supergraph compose --config ./supergraph.yml > src/gateway/schema.gql",
     "dev": "nodemon --watch src --ext ts --exec \"yarn build && yarn start\"",
     "fix": "run-p --print-label typecheck format",
     "format": "prettier --ignore-path .gitignore --write .",
