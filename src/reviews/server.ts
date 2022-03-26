@@ -1,15 +1,14 @@
 import { buildSubgraphSchema } from "@apollo/subgraph"
-import { ApolloServer, gql } from "apollo-server"
+import { ApolloServer } from "apollo-server"
 import { ApolloServerPluginInlineTrace } from "apollo-server-core"
-import { readFileSync } from "fs"
 import { resolvers } from "./resolvers"
+import { typeDefs } from "./schema"
 
 const name = "Reviews"
 const port = 3003
 const introspection = true
 const plugins = [ApolloServerPluginInlineTrace()]
 
-const typeDefs = gql(readFileSync(__dirname + "/schema.gql", "utf8"))
 const schema = buildSubgraphSchema({ typeDefs, resolvers })
 const server = new ApolloServer({ schema, introspection, plugins })
 
