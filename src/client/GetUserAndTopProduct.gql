@@ -1,0 +1,18 @@
+query GetUserAndTopProduct {
+  me {
+    id
+    username
+  }
+  topProducts(first: 1) {
+    upc
+    name
+    price
+    reviews {
+      body
+      author {
+        id
+        username
+      }
+    }
+  }
+}
